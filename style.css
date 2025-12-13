@@ -401,6 +401,10 @@ body{
   font-weight:800;
   font-size:13px;
 }
+.hero__copy{
+  max-width: 760px;
+}
+
 
 
 
