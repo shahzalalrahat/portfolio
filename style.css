@@ -364,10 +364,44 @@ body{
 }
 
 /* Prevent any image from overflowing by default */
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Make hero single-column after removing right card */
+.hero__grid{
+  grid-template-columns: 1fr !important;
 }
+
+/* Clean identity row */
+.heroIdentity{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:18px 0 10px;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background: rgba(255,255,255,.03);
+  width: fit-content;
+}
+
+.heroAvatar{
+  width:52px;
+  height:52px;
+  border-radius:999px;
+  object-fit:cover;
+  border:1px solid var(--border);
+}
+
+.heroName{
+  font-weight:900;
+  letter-spacing:.2px;
+}
+
+.heroRole{
+  margin-top:3px;
+  color:var(--muted);
+  font-weight:800;
+  font-size:13px;
+}
+
+
 
 
