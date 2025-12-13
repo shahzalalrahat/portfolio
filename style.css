@@ -139,13 +139,17 @@ body{
 }
 .profile{display:flex; align-items:center; gap:12px}
 .avatarImg{
-  width:80px;
-  height:80px;
-  border-radius:20px;
+  width:56px;
+  height:56px;
+  border-radius:16px;
   object-fit:cover;
+  object-position:center top; /* keeps face centered */
   border:1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  background: rgba(255,255,255,.03);
+  flex: 0 0 auto;
 }
+
 
 .profile__name{margin:0; font-size:18px}
 .profile__role{margin:4px 0 0; color:var(--muted); font-weight:700}
@@ -365,4 +369,5 @@ img{
   height: auto;
   display: block;
 }
+
 
