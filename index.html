@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Rahat — Portfolio" />
+  <title>Rahat | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top progress bar -->
+  <div class="progress" id="progress"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Rahat</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#research">Research</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <a class="btn" href="#contact">Hire / Contact</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a class="mobileNav__link" href="#about">About</a>
+      <a class="mobileNav__link" href="#projects">Projects</a>
+      <a class="mobileNav__link" href="#skills">Skills</a>
+      <a class="mobileNav__link" href="#research">Research</a>
+      <a class="mobileNav__link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="pill">Computer Science • ML • Computer Vision</p>
+          <h1 class="hero__title">
+            Building practical ML + interactive systems
+            <span class="hero__accent">that ship.</span>
+          </h1>
+          <p class="hero__subtitle">
+            I’m Rahat (Shahzalal Khan Rahat). I work on machine learning, computer vision,
+            and data-driven applications — from models to clean UI.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <button class="btn btn--ghost" id="copyEmailBtn" type="button">Copy Email</button>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__k">Focus</div>
+              <div class="metaCard__v">ML, CV, Data, Web</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Availability</div>
+              <div class="metaCard__v">Open to roles</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Location</div>
+              <div class="metaCard__v">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="profile">
+            <div class="avatar" aria-hidden="true">SR</div>
+            <div>
+              <h2 class="profile__name">Shahzalal Khan Rahat</h2>
+              <p class="profile__role">ML / CV • Software Developer</p>
+            </div>
+          </div>
+
+          <div class="quickLinks">
+            <a class="quickLinks__item" id="githubLink" href="https://github.com/shahzalalrahat" target="_blank" rel="noreferrer">
+              <span>GitHub</span><span class="arrow">↗</span>
+            </a>
+            <a class="quickLinks__item" id="linkedinLink" href="#" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span><span class="arrow">↗</span>
+            </a>
+            <a class="quickLinks__item" href="#projects">
+              <span>Projects</span><span class="arrow">↓</span>
+            </a>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="statGrid">
+            <div class="stat">
+              <div class="stat__n" id="projectCount">0</div>
+              <div class="stat__l">Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">ML</div>
+              <div class="stat__l">Primary Track</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">CV</div>
+              <div class="stat__l">Research Interest</div>
+            </div>
+          </div>
+
+          <p class="note">
+            Tip: edit your LinkedIn link in <code>script.js</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">About</h2>
+          <p class="sectionHead__sub">A short snapshot of who I am and what I do.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 class="card__title">Summary</h3>
+            <p class="card__text">
+              I build end-to-end projects: data → model → evaluation → deployment → clean UI.
+              I enjoy turning research ideas into working systems and explaining them clearly.
+            </p>
+
+            <div class="chipRow">
+              <span class="chip">Python</span>
+              <span class="chip">Computer Vision</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Data</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Education</h3>
+            <ul class="timeline">
+              <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__top">
+                    <span class="timeline__title">BSc in Computer Science</span>
+                    <span class="timeline__time">2023–2026</span>
+                  </div>
+                  <div class="timeline__desc">BRAC University (expected)</div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__top">
+                    <span class="timeline__title">HSC (Science)</span>
+                    <span class="timeline__time">2020–2022</span>
+                  </div>
+                  <div class="timeline__desc">Udayan Uchcha Madhyamik Bidyalaya</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid3 mt">
+          <div class="card">
+            <h3 class="card__title">What I’m good at</h3>
+            <ul class="bullets">
+              <li>Model training + evaluation (Dice/IoU, CI, ablations)</li>
+              <li>CV pipelines (pre/post-processing, ROI logic)</li>
+              <li>Clean, responsive UI with vanilla JS</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Tools I use</h3>
+            <ul class="bullets">
+              <li>Python, NumPy, OpenCV, scikit-learn</li>
+              <li>PyTorch (when needed)</li>
+              <li>GitHub, GitHub Pages</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Current goal</h3>
+            <p class="card__text">
+              Build projects that combine ML accuracy with strong usability — and publish research-level work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Projects</h2>
+          <p class="sectionHead__sub">
+            Search, filter, and open projects. Edit projects easily inside <code>script.js</code>.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <div class="searchWrap">
+            <input id="searchInput" class="input" type="search" placeholder="Search projects (e.g., XGBoost, CV, Web)..." />
+          </div>
+
+          <select id="categorySelect" class="select" aria-label="Filter by category">
+            <option value="all">All categories</option>
+          </select>
+
+          <button id="clearFilters" class="btn btn--ghost" type="button">Clear</button>
+        </div>
+
+        <div class="cards" id="projectGrid" aria-live="polite"></div>
+
+        <div class="emptyState" id="emptyState" hidden>
+          No projects matched your search. Try different keywords.
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Skills</h2>
+          <p class="sectionHead__sub">A quick overview of my core technical strengths.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3 class="card__title">Programming</h3>
+            <div class="chipRow">
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Machine Learning</h3>
+            <div class="chipRow">
+              <span class="chip">scikit-learn</span>
+              <span class="chip">XGBoost</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">NumPy</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Computer Vision</h3>
+            <div class="chipRow">
+              <span class="chip">OpenCV</span>
+              <span class="chip">Segmentation</span>
+              <span class="chip">ROI extraction</span>
+              <span class="chip">Morphology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Research</h2>
+          <p class="sectionHead__sub">Work I’m exploring beyond standard applications.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 class="card__title">Kidney lesion segmentation (Unsupervised)</h3>
+            <p class="card__text">
+              Exploring unsupervised segmentation pipelines for kidney stones and tumors using clustering
+              and feature-driven separation. Focus: ROI-only lesion extraction, strong evaluation, and robust post-processing.
+            </p>
+            <div class="chipRow">
+              <span class="chip">Unsupervised</span>
+              <span class="chip">Segmentation</span>
+              <span class="chip">Dice/IoU</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Turbulence modeling (PINN / ML)</h3>
+            <p class="card__text">
+              Surveying physics-informed approaches and solver-aware ML to improve stability and accuracy
+              in high-fidelity simulation tasks.
+            </p>
+            <div class="chipRow">
+              <span class="chip">PINN</span>
+              <span class="chip">CFD</span>
+              <span class="chip">ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Contact</h2>
+          <p class="sectionHead__sub">Want to collaborate or hire? Reach out.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 class="card__title">Details</h3>
+            <div class="contactRow">
+              <span class="contactRow__k">Email</span>
+              <span class="contactRow__v" id="emailText">shahzalal.khan.rahat@gmail.com</span>
+            </div>
+            <div class="contactRow">
+              <span class="contactRow__k">GitHub</span>
+              <a class="contactRow__v link" href="https://github.com/shahzalalrahat" target="_blank" rel="noreferrer">
+                github.com/shahzalalrahat
+              </a>
+            </div>
+            <div class="contactRow">
+              <span class="contactRow__k">LinkedIn</span>
+              <a class="contactRow__v link" id="linkedinContact" href="#" target="_blank" rel="noreferrer">
+                Add your LinkedIn link
+              </a>
+            </div>
+
+            <div class="mt">
+              <button class="btn" id="copyEmailBtn2" type="button">Copy Email</button>
+              <a class="btn btn--ghost" href="#projects">See Projects</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Quick message</h3>
+            <p class="card__text">
+              This form opens your email app with a pre-filled subject. (No backend needed.)
+            </p>
+
+            <form id="mailtoForm" class="form">
+              <label class="label">
+                Subject
+                <input class="input" id="subjectInput" type="text" placeholder="Opportunity / Collaboration" />
+              </label>
+              <label class="label">
+                Message
+                <textarea class="textarea" id="messageInput" rows="6" placeholder="Write your message..."></textarea>
+              </label>
+              <button class="btn" type="submit">Open Email Client</button>
+              <p class="hint">Tip: You can swap this with a real form later (Formspree, Netlify Forms, etc.).</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Rahat. Built with HTML/CSS/JS • Hosted on GitHub Pages.</p>
+      <a class="link" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
