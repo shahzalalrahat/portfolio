@@ -359,3 +359,10 @@ body{
   .footer__inner{flex-direction:column; align-items:flex-start}
 }
 
+/* Prevent any image from overflowing by default */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
