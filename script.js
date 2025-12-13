@@ -5,7 +5,7 @@ const PROFILE = {
   name: "Shahzalal Khan Rahat",
   email: "shahzalal.khan.rahat@gmail.com",
   github: "https://github.com/shahzalalrahat",
-  linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN/", // <-- change this
+  linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/", // <-- change this
 };
 
 /* ==========================
@@ -250,3 +250,4 @@ function onScroll(){
 }
 window.addEventListener("scroll", onScroll, {passive:true});
 onScroll();
+
