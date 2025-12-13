@@ -138,13 +138,15 @@ body{
   box-shadow:var(--shadow);
 }
 .profile{display:flex; align-items:center; gap:12px}
-.avatar{
-  width:48px; height:48px;
-  border-radius:16px;
-  background: rgba(124,92,255,.20);
-  display:grid; place-items:center;
-  font-weight:900;
+.avatarImg{
+  width:80px;
+  height:80px;
+  border-radius:20px;
+  object-fit:cover;
+  border:1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
 }
+
 .profile__name{margin:0; font-size:18px}
 .profile__role{margin:4px 0 0; color:var(--muted); font-weight:700}
 
@@ -356,3 +358,4 @@ body{
   .hero__title{font-size:38px}
   .footer__inner{flex-direction:column; align-items:flex-start}
 }
+
