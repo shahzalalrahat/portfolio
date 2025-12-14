@@ -3,7 +3,7 @@
 ========================== */
 const PROFILE = {
   name: "Shahzalal Khan Rahat",
-  email: "shahzalal.khan.rahat@gmail.com",
+  email: "shahzalalkhan91@gmail.com",
   github: "https://github.com/shahzalalrahat",
   linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/", // <-- change this
 };
@@ -40,7 +40,7 @@ const PROJECTS = [
     title: "Kidney Lesion Segmentation (Unsupervised)",
     category: "Computer Vision",
     description: "Exploring unsupervised lesion segmentation pipelines and ROI logic for kidney CT, focused on lesion-only extraction and evaluation.",
-    tags: ["Segmentation", "OpenCV", "Dice/IoU"],
+    tags: ["Segmentation", "OpenCV", "Classification"],
     live: "",
     repo: "https://github.com/shahzalalrahat",
   },
@@ -250,4 +250,5 @@ function onScroll(){
 }
 window.addEventListener("scroll", onScroll, {passive:true});
 onScroll();
+
 
