@@ -18,7 +18,7 @@ document.getElementById("viewCvBtn").addEventListener("click", () => {
    PROJECT DATA
 ========================== */
 const PROJECTS = [
-  {
+{
     title: "Diabetes Prediction Model",
     category: "Machine Learning",
     description: "Clinical and demographic feature-based diabetes prediction with model comparison and evaluation for early risk detection.",
@@ -242,5 +242,6 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
+
 
 
