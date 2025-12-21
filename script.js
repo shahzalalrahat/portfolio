@@ -8,6 +8,12 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/",
 };
 
+
+document.getElementById("viewCvBtn").addEventListener("click", () => {
+  window.open("./Shahzalal_Khan_CV.pdf", "_blank", "noopener");
+});
+
+
 /* ==========================
    PROJECT DATA
 ========================== */
@@ -244,3 +250,4 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
+
