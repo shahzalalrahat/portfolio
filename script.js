@@ -194,7 +194,8 @@ function renderProjects() {
   projectGrid.innerHTML = filtered.map(projectCard).join("");
 
   emptyState.hidden = filtered.length !== 0;
-  $("#projectCount").textContent = String(PROJECTS.length);
+  const projectCount = $("#projectCount");
+  if (projectCount) projectCount.textContent = String(PROJECTS.length);
 }
 
 buildCategoryOptions();
@@ -212,18 +213,31 @@ clearFilters.addEventListener("click", () => {
 /* ==========================
    MAILTO FORM
 ========================== */
+function gmailComposeUrl(to, subject, body) {
+  const _to = encodeURIComponent(to || "");
+  const _su = encodeURIComponent(subject || "");
+  const _body = encodeURIComponent(body || "");
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${_to}&su=${_su}&body=${_body}`;
+}
+
 $("#mailtoForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const subject = encodeURIComponent($("#subjectInput").value || "Portfolio Inquiry");
-  const body = encodeURIComponent($("#messageInput").value || "");
-  window.location.href = `mailto:${PROFILE.email}?subject=${subject}&body=${body}`;
+
+  const subject = $("#subjectInput").value || "Portfolio Inquiry";
+  const from = ($("#fromInput")?.value || "").trim();
+  const msg = $("#messageInput").value || "";
+
+  const body = from ? `${msg}\n\n---\nSender: ${from}` : msg;
+  const url = gmailComposeUrl(PROFILE.email, subject, body);
+
+  window.open(url, "_blank", "noopener,noreferrer");
 });
 
 /* ==========================
    SCROLL PROGRESS + ACTIVE NAV
 ========================== */
 const progress = $("#progress");
-const sections = ["home", "about", "projects", "skills", "research", "contact"].map((id) => document.getElementById(id));
+const sections = ["home", "about", "projects", "skills", "certifications", "research", "contact"].map((id) => document.getElementById(id));
 const navLinks = Array.from($$(".nav__link"));
 
 function onScroll() {
