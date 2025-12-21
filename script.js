@@ -19,14 +19,6 @@ document.getElementById("viewCvBtn").addEventListener("click", () => {
 ========================== */
 const PROJECTS = [
   {
-    title: "SEWING Wage Increment Prediction",
-    category: "Machine Learning",
-    description: "Interpretable ensemble ML framework for wage increment prediction using operational KPIs, supporting workforce decisions in garment manufacturing.",
-    tags: ["XGBoost", "scikit-learn", "Interpretability"],
-    live: "",
-    repo: "",
-  },
-  {
     title: "Diabetes Prediction Model",
     category: "Machine Learning",
     description: "Clinical and demographic feature-based diabetes prediction with model comparison and evaluation for early risk detection.",
@@ -250,4 +242,5 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
+
 
