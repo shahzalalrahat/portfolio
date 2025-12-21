@@ -8,26 +8,19 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/",
 };
 
-
-document.getElementById("viewCvBtn").addEventListener("click", () => {
-  window.open("./Shahzalal_Khan_CV.pdf", "_blank", "noopener");
-});
-
-
 /* ==========================
    PROJECT DATA
 ========================== */
 const PROJECTS = [
- {
-    title: "SEWING Wage Increment Prediction",
+  {
+    title: "Wage Increment Prediction",
     category: "Machine Learning",
-    description: "Interpretable ensemble ML framework for wage increment prediction using operational KPIs, supporting workforce decisions in garment manufacturing.",
-    tags: ["XGBoost", "scikit-learn", "Interpretability"],
+    description: "Interpretable ensemble ML framework for wage increment prediction",
+    tags: ["XGBoost", "scikit-learn"],
     live: "",
     repo: "",
   },
-
- {
+  {
     title: "Diabetes Prediction Model",
     category: "Machine Learning",
     description: "Clinical and demographic feature-based diabetes prediction with model comparison and evaluation for early risk detection.",
@@ -251,7 +244,3 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
-
-
-
-
