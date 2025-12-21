@@ -5,52 +5,52 @@ const PROFILE = {
   name: "Shahzalal Khan Rahat",
   email: "shahzalalkhan91@gmail.com",
   github: "https://github.com/shahzalalrahat",
-  linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/", // <-- change this
+  linkedin: "https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/",
 };
 
 /* ==========================
-   PROJECT DATA (EDIT THIS)
+   PROJECT DATA
 ========================== */
 const PROJECTS = [
   {
-    title: "Wage Prediction Model",
+    title: "SEWING Wage Increment Prediction",
     category: "Machine Learning",
-    description: "Built and evaluated a wage prediction model using ML frameworks with structured feature engineering and performance tracking.",
-    tags: ["XGBoost", "scikit-learn", "Pandas"],
+    description: "Interpretable ensemble ML framework for wage increment prediction using operational KPIs, supporting workforce decisions in garment manufacturing.",
+    tags: ["XGBoost", "scikit-learn", "Interpretability"],
     live: "",
-    repo: "https://github.com/shahzalalrahat",
+    repo: "",
   },
   {
-    title: "Diabetes Prediction",
+    title: "Diabetes Prediction Model",
     category: "Machine Learning",
-    description: "End-to-end classification workflow: preprocessing, training, evaluation, and clean reporting for diabetes prediction.",
-    tags: ["Classification", "Pandas", "Metrics"],
+    description: "Clinical and demographic feature-based diabetes prediction with model comparison and evaluation for early risk detection.",
+    tags: ["Classification", "scikit-learn", "Metrics"],
     live: "",
-    repo: "https://github.com/shahzalalrahat",
+    repo: "",
   },
   {
-    title: "Travel Agency Web Platform",
+    title: "Unsupervised Kidney Lesion Segmentation",
+    category: "Computer Vision",
+    description: "Clustering-centric pipeline for renal lesion segmentation (stones and tumors) with ROI logic, post-processing, and Dice/IoU evaluation.",
+    tags: ["Segmentation", "Clustering", "OpenCV"],
+    live: "",
+    repo: "",
+  },
+  {
+    title: "Travel Agency Platform",
     category: "Web",
-    description: "A responsive website with clean UI, structured sections, and scalable layout for a travel agency use-case.",
+    description: "Ticket booking platform with hotel and weather history features, promo code support, and real-time data handling.",
     tags: ["HTML", "CSS", "JavaScript"],
     live: "",
-    repo: "https://github.com/shahzalalrahat",
+    repo: "https://github.com/shahzalalrahat/The-Travel-Agency-Platform",
   },
   {
-    title: "Kidney Lesion Segmentation (Unsupervised)",
-    category: "Computer Vision",
-    description: "Exploring unsupervised lesion segmentation pipelines and ROI logic for kidney CT, focused on lesion-only extraction and evaluation.",
-    tags: ["Segmentation", "OpenCV", "Classification"],
+    title: "EYE of Blind",
+    category: "Hardware / IoT",
+    description: "Sonar-based navigation aid using Arduino and ultrasonic sensors to detect obstacles and provide vibration feedback.",
+    tags: ["Arduino", "Sensors", "Embedded"],
     live: "",
-    repo: "https://github.com/shahzalalrahat",
-  },
-  {
-    title: "Robotics Project",
-    category: "Systems",
-    description: "A practical robotics system project involving integration, control logic, and iterative testing.",
-    tags: ["Systems", "Integration"],
-    live: "",
-    repo: "https://github.com/shahzalalrahat",
+    repo: "",
   },
 ];
 
@@ -76,7 +76,7 @@ function setTheme(mode) {
   localStorage.setItem("theme", mode);
   $("#themeIcon").textContent = mode === "light" ? "☀️" : "🌙";
 }
-(function initTheme(){
+(function initTheme() {
   const saved = localStorage.getItem("theme");
   if (saved) setTheme(saved);
   else setTheme("dark");
@@ -110,7 +110,7 @@ mobileNav.addEventListener("click", (e) => {
 /* ==========================
    PROFILE LINKS
 ========================== */
-(function initProfile(){
+(function initProfile() {
   $("#emailText").textContent = PROFILE.email;
   $("#githubLink").href = PROFILE.github;
 
@@ -127,9 +127,9 @@ mobileNav.addEventListener("click", (e) => {
 async function copyEmail() {
   try {
     await navigator.clipboard.writeText(PROFILE.email);
-    toast("Email copied ✅");
+    toast("Email copied");
   } catch {
-    toast("Copy failed — please copy manually.");
+    toast("Copy failed");
   }
 }
 $("#copyEmailBtn").addEventListener("click", copyEmail);
@@ -145,26 +145,26 @@ const emptyState = $("#emptyState");
 const clearFilters = $("#clearFilters");
 
 function uniqueCategories(items) {
-  const cats = new Set(items.map(p => p.category));
-  return ["all", ...Array.from(cats).sort((a,b)=>a.localeCompare(b))];
+  const cats = new Set(items.map((p) => p.category));
+  return ["all", ...Array.from(cats).sort((a, b) => a.localeCompare(b))];
 }
 
 function buildCategoryOptions() {
   const cats = uniqueCategories(PROJECTS);
-  categorySelect.innerHTML = cats.map(c =>
-    `<option value="${c}">${c === "all" ? "All categories" : c}</option>`
-  ).join("");
+  categorySelect.innerHTML = cats
+    .map((c) => `<option value="${c}">${c === "all" ? "All categories" : c}</option>`)
+    .join("");
 }
 
 function matchesProject(p, q, cat) {
-  const hay = `${p.title} ${p.description} ${p.category} ${(p.tags||[]).join(" ")}`.toLowerCase();
+  const hay = `${p.title} ${p.description} ${p.category} ${(p.tags || []).join(" ")}`.toLowerCase();
   const okQuery = !q || hay.includes(q);
   const okCat = cat === "all" || p.category === cat;
   return okQuery && okCat;
 }
 
 function projectCard(p) {
-  const chips = (p.tags || []).slice(0, 5).map(t => `<span class="chip">${t}</span>`).join("");
+  const chips = (p.tags || []).slice(0, 6).map((t) => `<span class="chip">${t}</span>`).join("");
   const liveBtn = p.live ? `<a class="linkBtn" href="${p.live}" target="_blank" rel="noreferrer">Live ↗</a>` : "";
   const repoBtn = p.repo ? `<a class="linkBtn" href="${p.repo}" target="_blank" rel="noreferrer">Repo ↗</a>` : "";
 
@@ -190,7 +190,7 @@ function renderProjects() {
   const q = (searchInput.value || "").trim().toLowerCase();
   const cat = categorySelect.value;
 
-  const filtered = PROJECTS.filter(p => matchesProject(p, q, cat));
+  const filtered = PROJECTS.filter((p) => matchesProject(p, q, cat));
   projectGrid.innerHTML = filtered.map(projectCard).join("");
 
   emptyState.hidden = filtered.length !== 0;
@@ -220,35 +220,27 @@ $("#mailtoForm").addEventListener("submit", (e) => {
 });
 
 /* ==========================
-   FOOTER YEAR
-========================== */
-$("#year").textContent = String(new Date().getFullYear());
-
-/* ==========================
    SCROLL PROGRESS + ACTIVE NAV
 ========================== */
 const progress = $("#progress");
-const sections = ["home","about","projects","skills","research","contact"].map(id => document.getElementById(id));
+const sections = ["home", "about", "projects", "skills", "research", "contact"].map((id) => document.getElementById(id));
 const navLinks = Array.from($$(".nav__link"));
 
-function onScroll(){
+function onScroll() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const pct = height > 0 ? (scrollTop / height) * 100 : 0;
   progress.style.width = `${pct}%`;
 
-  // Active section
   let current = "home";
   for (const sec of sections) {
     const rect = sec.getBoundingClientRect();
     if (rect.top <= 110) current = sec.id;
   }
-  navLinks.forEach(a => {
+  navLinks.forEach((a) => {
     const href = a.getAttribute("href") || "";
     a.classList.toggle("is-active", href === `#${current}`);
   });
 }
-window.addEventListener("scroll", onScroll, {passive:true});
+window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
-
-
