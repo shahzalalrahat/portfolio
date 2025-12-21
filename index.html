@@ -21,6 +21,7 @@
         <a class="nav__link" href="#about">About</a>
         <a class="nav__link" href="#projects">Projects</a>
         <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#certifications">Certifications</a>
         <a class="nav__link" href="#research">Research</a>
         <a class="nav__link" href="#contact">Contact</a>
       </nav>
@@ -41,6 +42,7 @@
       <a class="mobileNav__link" href="#about">About</a>
       <a class="mobileNav__link" href="#projects">Projects</a>
       <a class="mobileNav__link" href="#skills">Skills</a>
+      <a class="mobileNav__link" href="#certifications">Certifications</a>
       <a class="mobileNav__link" href="#research">Research</a>
       <a class="mobileNav__link" href="#contact">Contact</a>
     </div>
@@ -274,6 +276,38 @@
       </div>
     </section>
 
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Certifications</h2>
+          <p class="sectionHead__sub">Training and professional development.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3 class="card__title">Completed</h3>
+            <ul class="bullets">
+              <li>CVIS: Training on Development of ML/DL Models (BRACu CVIS Lab, 2025)</li>
+              <li>DataCamp: Cleaning Data in Python; Feature Engineering; Supervised Learning; Supply Chain Analytics (2025)</li>
+              <li>Basics of Robotics (BRAC University, 2022)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">Focus areas</h3>
+            <p class="card__text">Hands-on learning aligned with my ML, CV, and systems work.</p>
+            <div class="chipRow">
+              <span class="chip">ML / DL</span>
+              <span class="chip">Data</span>
+              <span class="chip">Computer Vision</span>
+              <span class="chip">Robotics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- RESEARCH -->
     <section class="section" id="research">
       <div class="container">
@@ -323,15 +357,6 @@
               <span class="chip">ML</span>
             </div>
           </div>
-
-          <div class="card">
-            <h3 class="card__title">Certifications</h3>
-            <ul class="bullets">
-              <li>CVIS: Training on Development of ML/DL Models (BRACu CVIS Lab, 2025)</li>
-              <li>DataCamp: Cleaning Data in Python; Feature Engineering; Supervised Learning; Supply Chain Analytics (2025)</li>
-              <li>Basics of Robotics (BRAC University, 2022)</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -377,10 +402,14 @@
           <div class="card">
             <h3 class="card__title">Quick message</h3>
             <p class="card__text">
-              This form opens your email app with a pre-filled subject.
+              This form opens Gmail in your browser with a pre-filled subject.
             </p>
 
             <form id="mailtoForm" class="form">
+              <label class="label">
+                Your email
+                <input class="input" id="fromInput" type="email" placeholder="you@example.com" autocomplete="email" />
+              </label>
               <label class="label">
                 Subject
                 <input class="input" id="subjectInput" type="text" placeholder="Portfolio Inquiry" />
@@ -389,7 +418,7 @@
                 Message
                 <textarea class="textarea" id="messageInput" rows="6" placeholder="Write your message..."></textarea>
               </label>
-              <button class="btn" type="submit">Open Email Client</button>
+              <button class="btn" type="submit">Open Gmail Draft</button>
             </form>
           </div>
         </div>
