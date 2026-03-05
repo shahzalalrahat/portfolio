@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Shahzalal Khan Rahat — ML/CV portfolio, projects, research, and contact." />
+  <title>Shahzalal Khan Rahat | Portfolio</title>
+  <link rel="stylesheet" href="style_updated.css" />
+</head>
+<body>
+  <a class="skipLink" href="#home">Skip to content</a>
+  <div class="progress" id="progress"></div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Rahat</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#publications">Publications</a>
+        <a class="nav__link" href="#certifications">Certifications</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+        </button>
+        <a class="btn" href="#contact">Hire / Contact</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a class="mobileNav__link" href="#about">About</a>
+      <a class="mobileNav__link" href="#projects">Projects</a>
+      <a class="mobileNav__link" href="#skills">Skills</a>
+      <a class="mobileNav__link" href="#publications">Publications</a>
+      <a class="mobileNav__link" href="#certifications">Certifications</a>
+      <a class="mobileNav__link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <p class="pill">Machine Learning • Computer Vision • Data</p>
+
+          <h1 class="hero__title">
+            Practical ML systems,
+            <span class="hero__accent">built with care.</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            I’m Shahzalal Khan Rahat — a CSE student and research-focused builder.
+            I like turning messy data and real-world problems into clear, working solutions
+            (from experiments to evaluation and clean delivery).
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#projects">Explore Projects</a>
+            <a class="btn btn-secondary" href="./Shahzalal_Khan_Rahat____CV.pdf" target="_blank" rel="noopener">View Updated CV</a>
+            <button class="btn btn--ghost" id="copyEmailBtn" type="button">Copy Email</button>
+          </div>
+
+          <div class="hero__meta">
+            <div class="metaCard">
+              <div class="metaCard__k">Current focus</div>
+              <div class="metaCard__v">Unsupervised CV + ML</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Availability</div>
+              <div class="metaCard__v">Open to roles</div>
+            </div>
+            <div class="metaCard">
+              <div class="metaCard__k">Location</div>
+              <div class="metaCard__v">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+
+          <div class="statRow" aria-label="Highlights">
+            <div class="stat">
+              <div class="stat__n">2</div>
+              <div class="stat__l">Accepted papers</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">3.35</div>
+              <div class="stat__l">CGPA</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n" id="projectCount">5</div>
+              <div class="stat__l">Projects listed</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="heroSide card reveal" aria-label="Profile summary">
+          <div class="heroIdentity">
+            <img class="heroAvatar" src="profile.jpg" alt="Photo of Shahzalal Khan Rahat" />
+            <div>
+              <div class="heroName">Shahzalal Khan Rahat</div>
+              <div class="heroRole">ML / CV • Software Developer</div>
+            </div>
+          </div>
+
+          <div class="quickLinks">
+            <a class="quickLinks__item" id="githubLink" href="https://github.com/shahzalalrahat" target="_blank" rel="noreferrer">
+              <span>GitHub</span><span class="arrow">↗</span>
+            </a>
+            <a class="quickLinks__item" id="linkedinLink" href="https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span><span class="arrow">↗</span>
+            </a>
+            <a class="quickLinks__item" href="#projects">
+              <span>Browse projects</span><span class="arrow">↓</span>
+            </a>
+          </div>
+
+          <div class="divider" role="presentation"></div>
+
+          <div class="miniAbout">
+            <div class="miniAbout__k">Email</div>
+            <div class="miniAbout__v" id="emailText">shahzalalkhan91@gmail.com</div>
+            <button class="miniAbout__btn" id="copyEmailBtn2" type="button">Copy</button>
+          </div>
+
+          <div class="divider" role="presentation"></div>
+
+          <div class="miniNote">
+            <span class="miniNote__dot" aria-hidden="true"></span>
+            <span>Tip: open a project for details and links.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">About</h2>
+          <p class="sectionHead__sub">Short, real, and specific.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3 class="card__title">Summary</h3>
+            <p class="card__text">
+              I work across machine learning, computer vision, and data analysis — with a preference for practical pipelines:
+              clean inputs, strong baselines, careful evaluation, and readable outputs. My current research explores unsupervised
+              segmentation for kidney CT images using SAM/MedSAM-style components and clustering.
+            </p>
+
+            <div class="chipRow">
+              <span class="chip">Python</span>
+              <span class="chip">ML</span>
+              <span class="chip">Computer Vision</span>
+              <span class="chip">EDA</span>
+              <span class="chip">Model Evaluation</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card__title">Education</h3>
+            <ul class="timeline">
+              <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__top">
+                    <span class="timeline__title">B.Sc. in Computer Science and Engineering</span>
+                    <span class="timeline__time">Expected 2026</span>
+                  </div>
+                  <div class="timeline__desc">BRAC University, Dhaka — CGPA: 3.35</div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__top">
+                    <span class="timeline__title">HSC (Science)</span>
+                    <span class="timeline__time">2020</span>
+                  </div>
+                  <div class="timeline__desc">Cantonment Public School and College, Saidpur — GPA: 5.00</div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__top">
+                    <span class="timeline__title">SSC</span>
+                    <span class="timeline__time">2018</span>
+                  </div>
+                  <div class="timeline__desc">Cantonment Public School and College, Saidpur — GPA: 5.00</div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="divider" role="presentation"></div>
+            <h3 class="card__title">Volunteer</h3>
+            <p class="card__text">General member — Robotics Club of BRAC University (ROBU), IT Department.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">Projects</h2>
+          <p class="sectionHead__sub">Search, filter, then click a card to open details.</p>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="searchWrap">
+            <input id="searchInput" class="input" type="search" placeholder="Search projects (e.g., segmentation, XGBoost, web)..." />
+          </div>
+
+          <select id="categorySelect" class="select" aria-label="Filter by category">
+            <option value="all">All categories</option>
+          </select>
+
+          <button id="clearFilters" class="btn btn--ghost" type="button">Clear</button>
+        </div>
+
+        <div class="cards" id="projectGrid" aria-live="polite"></div>
+
+        <div class="emptyState" id="emptyState" hidden>
+          No projects matched your search. Try different keywords.
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">Skills</h2>
+          <p class="sectionHead__sub">Grouped to make it easy to scan.</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card reveal">
+            <h3 class="card__title">Machine Learning</h3>
+            <div class="chipRow">
+              <span class="chip">Supervised / Unsupervised</span>
+              <span class="chip">Feature Engineering</span>
+              <span class="chip">Model Evaluation</span>
+              <span class="chip">Interpretability</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card__title">Computer Vision</h3>
+            <div class="chipRow">
+              <span class="chip">Segmentation</span>
+              <span class="chip">Clustering</span>
+              <span class="chip">Feature Extraction</span>
+              <span class="chip">Post-processing</span>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card__title">Tools</h3>
+            <div class="chipRow">
+              <span class="chip">Python</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">scikit-learn</span>
+              <span class="chip">XGBoost</span>
+              <span class="chip">LaTeX</span>
+              <span class="chip">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">Publications & Research</h2>
+          <p class="sectionHead__sub">Selected work from my updated CV.</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card reveal">
+            <div class="pubTop">
+              <span class="badge">Accepted</span>
+              <span class="pubYear">2026</span>
+            </div>
+            <h3 class="card__title">SEWING: Interpretable Ensemble ML Framework for Sewing Operators’ Wage Increments</h3>
+            <p class="card__text">
+              An interpretable framework using operational KPIs across four garment factories to support wage and workforce decisions.
+              Reported performance reached R² up to 0.99.
+            </p>
+            <div class="pubLinks">
+              <a class="linkBtn" href="https://doi.org/10.1016/j.eswa.2026.131900" target="_blank" rel="noreferrer">DOI ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="pubTop">
+              <span class="badge">Accepted</span>
+              <span class="pubYear">2026</span>
+            </div>
+            <h3 class="card__title">LassoForest: CGPA Dynamics via Time-Series Forecasting & Counterfactual Analysis</h3>
+            <p class="card__text">
+              A temporal ML framework for CGPA forecasting using long-term behavioral signals (e.g., alcohol consumption),
+              with counterfactual analysis to support intervention-oriented insights.
+            </p>
+          </article>
+        </div>
+
+        <div class="grid2 mt">
+          <article class="card reveal">
+            <div class="pubTop">
+              <span class="badge">Thesis</span>
+              <span class="pubYear">Ongoing</span>
+            </div>
+            <h3 class="card__title">TorqueSAM: Unsupervised Kidney CT Analysis with SAM-Integrated Torque Clustering Segmentation</h3>
+            <p class="card__text">
+              Unsupervised renal stone segmentation using MedSAM and clustering as the core mechanism, minimizing reliance on labeled data.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">Certifications & Achievements</h2>
+          <p class="sectionHead__sub">Training and milestones.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3 class="card__title">Certifications</h3>
+            <ul class="bullets">
+              <li>CVIS Training on Development of ML/DL Models (BRACu CVIS Lab, 2025)</li>
+              <li>DataCamp: Cleaning Data in Python (2025)</li>
+              <li>DataCamp: Feature Engineering for Machine Learning in Python (2025)</li>
+              <li>Basics of Robotics (BOR) — BRAC University (2022)</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card__title">Achievements</h3>
+            <ul class="bullets">
+              <li>Participant — National High School Programming (2017)</li>
+            </ul>
+            <div class="divider" role="presentation"></div>
+            <h3 class="card__title">Hobbies</h3>
+            <p class="card__text">Motorcycling, cooking, tech reviews, cricket, photography.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2 class="sectionHead__title">Contact</h2>
+          <p class="sectionHead__sub">Fastest way to reach me is email.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card reveal">
+            <h3 class="card__title">Details</h3>
+            <div class="contactRow">
+              <span class="contactRow__k">Email</span>
+              <span class="contactRow__v" id="emailText2">shahzalalkhan91@gmail.com</span>
+            </div>
+            <div class="contactRow">
+              <span class="contactRow__k">Phone</span>
+              <span class="contactRow__v">+880 1761 047607</span>
+            </div>
+            <div class="contactRow">
+              <span class="contactRow__k">GitHub</span>
+              <a class="contactRow__v link" href="https://github.com/shahzalalrahat" target="_blank" rel="noreferrer">
+                github.com/shahzalalrahat
+              </a>
+            </div>
+            <div class="contactRow">
+              <span class="contactRow__k">LinkedIn</span>
+              <a class="contactRow__v link" id="linkedinContact" href="https://www.linkedin.com/in/shahzalal-khan-rahat-a717b0285/" target="_blank" rel="noreferrer">
+                linkedin.com/in/shahzalal-khan-rahat-a717b0285/
+              </a>
+            </div>
+
+            <div class="mt">
+              <button class="btn" id="copyEmailBtn3" type="button">Copy Email</button>
+              <a class="btn btn--ghost" href="./Shahzalal_Khan_Rahat____CV.pdf" target="_blank" rel="noopener">Open CV</a>
+            </div>
+          </div>
+
+          <div class="card reveal">
+            <h3 class="card__title">Quick message</h3>
+            <p class="card__text">
+              This opens Gmail with a pre-filled draft. (No data is stored on this site.)
+            </p>
+
+            <form id="mailtoForm" class="form">
+              <label class="label">
+                Your email
+                <input class="input" id="fromInput" type="email" placeholder="you@example.com" autocomplete="email" />
+              </label>
+              <label class="label">
+                Subject
+                <input class="input" id="subjectInput" type="text" placeholder="Portfolio inquiry" />
+              </label>
+              <label class="label">
+                Message
+                <textarea class="textarea" id="messageInput" rows="6" placeholder="Write your message..."></textarea>
+              </label>
+              <button class="btn" type="submit">Open Gmail Draft</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__muted">© <span id="yearNow"></span> Shahzalal Khan Rahat</span>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" type="button" aria-label="Close" data-close="true">✕</button>
+      <div class="modal__body">
+        <div class="modal__top">
+          <span class="badge" id="modalBadge">Project</span>
+          <span class="modal__meta" id="modalMeta"></span>
+        </div>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__chips" id="modalChips"></div>
+        <div class="modal__actions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script_updated.js"></script>
+</body>
+</html>
